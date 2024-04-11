@@ -10,4 +10,10 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 let marker = L.marker([lat, lng]).addTo(map);
-marker.bindPopup("<b>Hello New Zealand!</b><br>Welcome to Abel Tasman National Park.").openPopup();
+    marker.bindPopup(`
+        <b>Welcome to Abel Tasman National Park!</b>
+        <ul>
+            <li>Breite: ${lat} </li>
+            <li>Länge: ${lng} </li>
+        </ul>
+    `).openPopup();
