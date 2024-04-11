@@ -20,3 +20,7 @@ let marker = L.marker([lat, lng]).addTo(map);
             <li>Länge: ${lng.toFixed(5)} </li>
         </ul>
     `).openPopup();
+
+    L.control.scale({
+        imperial:false
+    }).addTo(map);
